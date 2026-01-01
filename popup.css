@@ -1,0 +1,27 @@
+/* Simple modern popup styles */
+:root{
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --accent-600:#1e40af;
+  --surface:#f8fafc;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, Arial, sans-serif}
+html,body{margin:0;padding:0;background:var(--bg);color:#0f172a}
+.container{width:360px;padding:16px}
+.header{display:flex;align-items:center;gap:12px}
+.header svg{width:36px;height:36px;flex:0 0 36px}
+.header h1{font-size:16px;margin:0}
+.desc{color:var(--muted);font-size:13px;margin:10px 0}
+.controls{display:flex;gap:8px;align-items:center}
+#filename{flex:1;padding:8px;border:1px solid #e6eef8;border-radius:8px}
+#format{padding:8px;border:1px solid #e6eef8;border-radius:8px;background:var(--surface)}
+.primary{background:linear-gradient(180deg,var(--accent),var(--accent-600));color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+.primary[disabled]{opacity:0.6;cursor:default}
+.controls .primary.loading{position:relative}
+.controls .primary.loading::after{content:"";position:absolute;right:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.4);border-top-color:rgba(255,255,255,0.9);animation:spin 1s linear infinite}
+.status{margin-top:12px;font-size:13px;color:var(--muted);min-height:20px}
+.status.error{color:var(--danger)}
+.small{font-size:12px;color:var(--muted);margin-top:8px}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}

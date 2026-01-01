@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Export Table</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="16" rx="2" fill="#2563eb" opacity="0.12"/>
+        <path d="M7 9h10v2H7zM7 13h6v2H7z" fill="#2563eb"/>
+      </svg>
+      <h1>Export Table</h1>
+    </header>
+
+    <p class="desc">Quickly export any table on the active page to Excel or CSV.</p>
+
+    <div class="controls">
+      <input id="filename" type="text" value="table" aria-label="Filename" />
+      <select id="format" aria-label="Export format">
+        <option value="xls">.xls</option>
+        <option value="csv">.csv</option>
+      </select>
+      <button id="exportBtn" class="primary">Export</button>
+    </div>
+
+    <div id="status" class="status" aria-live="polite"></div>
+    <div class="small">Developed By Isuru Senarath - Intern WPS II - IT</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Export Table to Excel",
+  "version": "2.0",
+  "description": "Export any table on the current webpage to an Excel file.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Export Table",
+    "default_icon": "logo2.png"
+  }
+  
+}
+
+
+
+
+
